@@ -1,0 +1,27 @@
+[
+  {
+    "Id": 4,
+    "Surname": "Denisyuk",
+    "PhoneNumber": "+375297907365"
+  },
+  {
+    "Id": 20,
+    "Surname": "Nikolaenkov",
+    "PhoneNumber": "+375294527384"
+  },
+  {
+    "Id": 7,
+    "Surname": "Novik",
+    "PhoneNumber": "+375445149442"
+  },
+  {
+    "Id": 15,
+    "Surname": "Taraikovich",
+    "PhoneNumber": "+3752947523841"
+  },
+  {
+    "Id": 2,
+    "Surname": "Yakunovich",
+    "PhoneNumber": "+3752946248147"
+  }
+]
