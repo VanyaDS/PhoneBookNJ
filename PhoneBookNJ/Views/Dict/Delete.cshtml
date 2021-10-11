@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h4>Are you really going to delete selected note?</h4>
+    <div>
+        <form method="post" action="~/Dict/DeleteSave">
+            <input type="hidden" id="id" name="id" value="@ViewBag.noteId" />
+            <input type="submit" value="Delete" />
+        </form>
+        <br>
+        <form method="get" action="~/Dict/Index">
+            <input type="submit" value="Go back" />
+        </form>
+    </div>
+</body>
+</html>

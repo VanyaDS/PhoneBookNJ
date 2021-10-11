@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+
+        table {
+        }
+
+        td {
+            margin-left: 20px;
+            border: 1px solid grey;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current list</h1>
+    <table>
+        <tr>
+            <td><p>Surname</p></td>
+            <td><p>Phone number</p></td>
+
+        </tr>
+        @foreach (var b in ViewBag.Notes)
+        {
+            <tr>
+                <td><p>@b.Surname</p></td>
+                <td><p>@b.PhoneNumber</p></td>
+
+
+                <td><p><a href="/Dict/Update/@b.Id">Update</a></p></td>
+                <td><p><a href="/Dict/Delete/@b.Id">Delete</a></p></td>
+            </tr>
+
+        }
+
+    </table>
+    <p><a href="/Dict/Add">Add new note</a></p>
+</body>
+</html>

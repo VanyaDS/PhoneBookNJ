@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace PhoneRepositoryLibJson
 {
-    class PhoneDictionary : IPhoneDictionary<Note>
+    public class PhoneDictionary : IPhoneDictionary<Note>
     {
         public List<Note> Notes;
         public PhoneDictionary()

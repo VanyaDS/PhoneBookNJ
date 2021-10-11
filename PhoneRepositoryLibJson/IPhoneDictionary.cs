@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneRepositoryLibJson
 {
-    interface IPhoneDictionary<T> where T: class 
+    public interface IPhoneDictionary<T> where T: class 
     {
         IEnumerable<T> GetNotes();
         T GetNote(int id);

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Ninject;
+using Ninject.Modules;
+using Ninject.Web.Mvc;
+using PhoneBookNJ.NJ;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +17,10 @@ namespace PhoneBookNJ
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            NinjectModule registrations = new NinjectRegistrations();
+            var kernel = new StandardKernel(registrations);
+            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
         }
     }
 }
