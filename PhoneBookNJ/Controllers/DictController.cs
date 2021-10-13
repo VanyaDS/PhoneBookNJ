@@ -1,9 +1,10 @@
-﻿using PhoneRepositoryLibJson;
+﻿//using PhoneRepositoryLibJson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PhoneRepositoryLibSql;
 
 namespace PhoneBookNJ.Controllers
 {
@@ -16,8 +17,9 @@ namespace PhoneBookNJ.Controllers
             this.notes = notes;
         }
         public ActionResult Index()
-        {
-            ViewBag.Notes = notes.GetNotes();
+        {   if (notes.GetNotes() != null)
+                ViewBag.Notes = notes.GetNotes();
+            else ViewBag.Notes = null;
             return View();
         }
 

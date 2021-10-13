@@ -75,6 +75,9 @@
     <Reference Include="PhoneRepositoryLibJson">
       <HintPath>..\PhoneRepositoryLibJson\bin\Debug\PhoneRepositoryLibJson.dll</HintPath>
     </Reference>
+    <Reference Include="PhoneRepositoryLibSql">
+      <HintPath>..\PhoneRepositoryLibSql\bin\Debug\PhoneRepositoryLibSql.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -129,6 +132,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DictController.cs" />
+    <Compile Include="Controllers\WrongRouteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,6 +147,7 @@
     <Content Include="Views\Dict\Add.cshtml" />
     <Content Include="Views\Dict\Update.cshtml" />
     <Content Include="Views\Dict\Delete.cshtml" />
+    <Content Include="Views\WrongRoute\NotFound.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

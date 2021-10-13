@@ -29,8 +29,10 @@
             <td><p>Phone number</p></td>
 
         </tr>
-        @foreach (var b in ViewBag.Notes)
+        @if (ViewBag.Notes != null)
         {
+            foreach (var b in ViewBag.Notes)
+            {
             <tr>
                 <td><p>@b.Surname</p></td>
                 <td><p>@b.PhoneNumber</p></td>
@@ -40,6 +42,7 @@
                 <td><p><a href="/Dict/Delete/@b.Id">Delete</a></p></td>
             </tr>
 
+            }
         }
 
     </table>
