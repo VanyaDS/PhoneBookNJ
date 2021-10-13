@@ -1,10 +1,9 @@
 ﻿
-@{
-    Layout = null;
-}
+
+
 
 <!DOCTYPE html>
-
+@using PhoneBookNJ.CustomHelpers
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -13,21 +12,10 @@
 <body>
     <div>
         <h3>Add new note</h3>
-        <form method="post" action="~/Dict/AddSave">
-            <table>
-                <tr>
-                    <td><p>Enter your surname </p></td>
-                    <td><input type="text" name="Surname" /> </td>
-                </tr>
-                <tr>
-                    <td><p>Enter phone number :</p></td>
-                    <td>
-                        <input type="text" name="PhoneNumber" />
-                    </td>
-                </tr>
-                <tr><td><input type="submit" value="Go" /> </td><td></td></tr>
-            </table>
-        </form>
+       
+        @Html.AddNoteForm()
+    
+   
     </div>
 </body>
 </html>

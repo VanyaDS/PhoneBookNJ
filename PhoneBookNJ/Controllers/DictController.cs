@@ -20,7 +20,7 @@ namespace PhoneBookNJ.Controllers
         {   if (notes.GetNotes() != null)
                 ViewBag.Notes = notes.GetNotes();
             else ViewBag.Notes = null;
-            return View();
+            return View(notes.GetNotes());
         }
 
         public ActionResult Add()
@@ -34,7 +34,7 @@ namespace PhoneBookNJ.Controllers
           
             notes.Create(Surname, PhoneNumber);
             ViewBag.Notes = notes.GetNotes();
-            return View("Index");
+            return View("Index", notes.GetNotes());
         }
         public ActionResult Update(int id)
         {
@@ -47,7 +47,7 @@ namespace PhoneBookNJ.Controllers
            
             notes.Update(id, surname, phoneNumber);
             ViewBag.Notes = notes.GetNotes();
-            return View("Index");
+            return View("Index", notes.GetNotes());
         }
         public ActionResult Delete(int id)
         {
@@ -60,7 +60,7 @@ namespace PhoneBookNJ.Controllers
           
             notes.Delete(id);
             ViewBag.Notes = notes.GetNotes();
-            return View("Index");
+            return View("Index", notes.GetNotes());
         }
 
     }

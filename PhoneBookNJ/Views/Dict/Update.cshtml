@@ -1,10 +1,7 @@
 ﻿
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
-
+@using PhoneBookNJ.CustomHelpers
+@{int id = ViewBag.noteId;}
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -13,17 +10,20 @@
 <body>
     <h1>Here you can change selected note</h1>
     <div>
-        <form method="post" action="~/Dict/UpdateSave">
-            <input type="hidden" value="@ViewBag.noteId" name="id" />
-            <br />
-            <p>enter new name</p>
-            <input type="text" name="surname" />
-            <br />
-            <p>enter new phone number</p>
-            <input type="text" name="phoneNumber" />
-            <br><br />
-            <input type="submit" value="go" />
-        </form>
+
+        @Html.UpdateNoteForm(id.ToString())
+
+        @*<form method="post" action="~/Dict/UpdateSave">
+                <input type="hidden" value="@ViewBag.noteId" name="id" />
+                <br />
+                <p>enter new name</p>
+                <input type="text" name="surname" />
+                <br />
+                <p>enter new phone number</p>
+                <input type="text" name="phoneNumber" />
+                <br><br />
+                <input type="submit" value="go" />
+            </form>*@
     </div>
 
 

@@ -1,28 +1,20 @@
-﻿
-@{
-    Layout = null;
-}
-
+﻿@model IEnumerable<PhoneRepositoryLibSql.Note>
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <style>
 
-        table {
-        }
-
-        td {
-            margin-left: 20px;
-            border: 1px solid grey;
-            padding: 15px;
-        }
-    </style>
 </head>
 <body>
-    <h1>Current list</h1>
+    @section head
+    {
+        <h2>
+            This page created by Ivan Denisyuk (my head section)<h2>
+    }
+
+    <h3>Current list</h3>
     <table>
         <tr>
             <td><p>Surname</p></td>
@@ -31,16 +23,9 @@
         </tr>
         @if (ViewBag.Notes != null)
         {
-            foreach (var b in ViewBag.Notes)
+            foreach (var b in Model)
             {
-            <tr>
-                <td><p>@b.Surname</p></td>
-                <td><p>@b.PhoneNumber</p></td>
-
-
-                <td><p><a href="/Dict/Update/@b.Id">Update</a></p></td>
-                <td><p><a href="/Dict/Delete/@b.Id">Delete</a></p></td>
-            </tr>
+                @Html.Partial("ViewPart", (object)b)
 
             }
         }
